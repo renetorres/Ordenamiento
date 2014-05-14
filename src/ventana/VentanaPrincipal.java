@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package ventana;
+import javax.swing.JFileChooser;
 import mx.lasalle.poo.PanelPrincipal;
 import mx.lasalle.poo.Principal;
 /**
@@ -153,10 +154,12 @@ System.exit(0);        // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       Principal principal= new Principal();
-       principal.setVisible(true);
+        JFileChooser dlg = new JFileChooser(); // Crea un objeto de dialogo JFileChooser 
+       int option = dlg.showOpenDialog(this);// Abre la ventana de dialogo
+       if (option == JFileChooser.APPROVE_OPTION){ // Si hace click en el boton  se abre el dialogo
+       String file = dlg.getSelectedFile().getPath(); // Obtiene  ruta y nombre del arhivo 
         
-        
+       }
      
         //Principal principal= new Principal();
         //principal.setVisible(true);
