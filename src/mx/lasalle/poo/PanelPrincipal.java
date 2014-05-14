@@ -58,9 +58,16 @@ public class PanelPrincipal extends javax.swing.JPanel {
         });
         add(txtNombre, java.awt.BorderLayout.PAGE_END);
 
-        lblImagen.setText("Imagen");
+        lblImagen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                lblImagenActionPerformed(evt);
+            }
+        });
         jScrollPane1.setViewportView(lblImagen);
 
+        botonaceptar.setBackground(new java.awt.Color(153, 153, 153));
+        botonaceptar.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        botonaceptar.setForeground(new java.awt.Color(255, 0, 0));
         botonaceptar.setText("Aceptar");
         botonaceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,10 +79,10 @@ public class PanelPrincipal extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(0, 2, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(2, 2, 2)
                 .addComponent(botonaceptar)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 413, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -117,6 +124,10 @@ VentanaPrincipal ventanaprincipal= new VentanaPrincipal();
    
    
     }//GEN-LAST:event_botonaceptarActionPerformed
+
+    private void lblImagenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lblImagenActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_lblImagenActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
